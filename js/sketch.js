@@ -1,13 +1,13 @@
 var numberOfSquares = 16;
-var mainAreaWidth = 480;
+var mainAreaWidth = 640;
 var color = "#000";
 
 $(document).ready(function() {
 	generateGrid(numberOfSquares);
 
 	$('#new').on('click', function() {
-		var numberOfSquares = parseInt(prompt('How many squares in a row', 16));
-		if (isNaN(numberOfSquares)) numberOfSquares = 16;
+		var numberOfSquares = parseInt(prompt('How many squares in a row?', 16));
+		if (isNaN(numberOfSquares) || numberOfSquares < 1 || numberOfSquares > 96) numberOfSquares = 16;
 		generateGrid(numberOfSquares);
 	});
 
