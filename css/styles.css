@@ -57,13 +57,14 @@ li {
 
 #main {
 	margin: 20px auto;
-	display: table;
+	width: 640px;
+	height: 640px;
 }
 
 .square {
-	border: 1px solid black;
+	border: 1px solid #666;
 	float: left;
-	margin:-1px 0 0 -1px;
+	/*margin:-1px 0 0 -1px;*/
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;

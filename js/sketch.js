@@ -1,5 +1,4 @@
 var numberOfSquares = 16;
-var mainAreaWidth = 640;
 var color = "#000";
 
 $(document).ready(function() {
@@ -51,7 +50,7 @@ $(document).ready(function() {
 var generateGrid = function(n) {
 	$(".square").remove();
 	var mainArea = $("#main");
-	var squareSize = mainAreaWidth / n;
+	var squareSize = 100.0 / n;
 	for(var i = 0; i < n; i++) {
 		mainArea.append('<div class="square first"></div>');
 		for(var j = 1; j < n; j++) {
@@ -59,7 +58,7 @@ var generateGrid = function(n) {
 		}
 	}
 	var squares = $('.square');
-	squares.css({width: squareSize, height: squareSize});
+	squares.css({width: squareSize + '%', height: squareSize + '%'});
 	squares.hover(function() {
 		$(this).css("background-color", color);
 	});
